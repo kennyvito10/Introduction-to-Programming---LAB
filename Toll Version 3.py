@@ -153,7 +153,7 @@ operateToll = TollOperator1()                                  #Operator for Tol
 operateToll_2 = TollOperator2()
 
 while restart != ('N'):                                       #Starts the loop
-    inputloc = input("Enter Location of Tolls : Meruya / Pondok Aren?: ").lower()               #Asks the user to input location of toll gate
+    inputloc = input("Enter Location of Tolls : Meruya / Pondok Aren? or type quit to exit program: ").lower()               #Asks the user to input location of toll gate
     if inputloc == "meruya":                                               #If input is Meruya, it will operate the operateToll operator and
         usrInput = input("Enter Vehicle Type: ").lower()
         if usrInput == "car":
@@ -188,6 +188,11 @@ while restart != ('N'):                                       #Starts the loop
                 print_revenue1()
                 print_revenue2()
                 quit()
+
+        if usrInput == "quit":
+            print_revenue1()
+            print_revenue2()
+            quit()
 
     elif inputloc == "pondok aren":                                               #If location is Pondok Aren, it will operate operateToll_2 operator
         usrInput = input("Enter Vehicle Type: ").lower()
@@ -224,3 +229,12 @@ while restart != ('N'):                                       #Starts the loop
                 print_revenue2()
                 quit()
 
+        if usrInput == "quit":
+            print_revenue1()
+            print_revenue2()
+            quit()
+
+    elif inputloc == "quit":                                            #quits the program
+        print_revenue1()
+        print_revenue2()
+        quit()
